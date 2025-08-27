@@ -127,9 +127,9 @@ class ModernVisualEngine:
         'SCARLET': '\033[38;5;197m',
         'RUBY': '\033[38;5;161m',
     # Unified theme primary/secondary (used going forward instead of legacy blue/green accents)
-    'PRIMARY_BORDER': '\033[38;5;160m',  # CRIMSON
-    'ACCENT_LINE': '\033[38;5;196m',      # HACKER_RED
-    'ACCENT_GRADIENT': '\033[38;5;124m',  # BLOOD_RED (for subtle alternation)
+    'PRIMARY_BORDER': '\033[38;5;100m',  # OLIVE  (#878700)
+    'ACCENT_LINE': '\033[38;5;64m',   # FIELD GREEN (#5f8700)
+    'ACCENT_GRADIENT': '\033[38;5;142m',  # DARK OLIVE (#afaf00)
         # Highlighting colors
         'HIGHLIGHT_RED': '\033[48;5;196m\033[38;5;15m',  # Red background, white text
         'HIGHLIGHT_YELLOW': '\033[48;5;226m\033[38;5;16m',  # Yellow background, black text
