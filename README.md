@@ -1,18 +1,21 @@
+## Provenance & License
+This distribution incorporates code from https://github.com/0x4m4/hexstrike-ai, which indicates an MIT License in its README (commit 0475ec44ff34eba7bb3737244c6e32f25466b05d). See NOTICE and LICENSE for details.
+
 <div align="center">
 
-<img src="assets/hexstrike-logo.png" alt="HexStrike AI Logo" width="220" style="margin-bottom: 20px;"/>
+<img src="assets/waypoint-logo.png" alt="Waypoint Logo" width="220" style="margin-bottom: 20px;"/>
 
-# HexStrike AI MCP Agents v6.0
+# Waypoint MCP Agents v6.0
 ### AI-Powered MCP Cybersecurity Automation Platform
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Security](https://img.shields.io/badge/Security-Penetration%20Testing-red.svg)](https://github.com/0x4m4/hexstrike-ai)
-[![MCP](https://img.shields.io/badge/MCP-Compatible-purple.svg)](https://github.com/0x4m4/hexstrike-ai)
-[![Version](https://img.shields.io/badge/Version-6.0.0-orange.svg)](https://github.com/0x4m4/hexstrike-ai/releases)
-[![Tools](https://img.shields.io/badge/Security%20Tools-150%2B-brightgreen.svg)](https://github.com/0x4m4/hexstrike-ai)
-[![Agents](https://img.shields.io/badge/AI%20Agents-12%2B-purple.svg)](https://github.com/0x4m4/hexstrike-ai)
-[![Stars](https://img.shields.io/github/stars/0x4m4/hexstrike-ai?style=social)](https://github.com/0x4m4/hexstrike-ai)
+[![Security](https://img.shields.io/badge/Security-Penetration%20Testing-red.svg)](https://github.com/0x4m4/waypoint)
+[![MCP](https://img.shields.io/badge/MCP-Compatible-purple.svg)](https://github.com/0x4m4/waypoint)
+[![Version](https://img.shields.io/badge/Version-6.0.0-orange.svg)](https://github.com/0x4m4/waypoint/releases)
+[![Tools](https://img.shields.io/badge/Security%20Tools-150%2B-brightgreen.svg)](https://github.com/0x4m4/waypoint)
+[![Agents](https://img.shields.io/badge/AI%20Agents-12%2B-purple.svg)](https://github.com/0x4m4/waypoint)
+[![Stars](https://img.shields.io/github/stars/0x4m4/waypoint?style=social)](https://github.com/0x4m4/waypoint)
 
 **Advanced AI-powered penetration testing MCP framework with 150+ security tools and 12+ autonomous AI agents**
 
@@ -31,7 +34,7 @@
     <img src="https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white&style=for-the-badge" alt="Join our Discord" />
   </a>
   &nbsp;&nbsp;
-  <a href="https://www.linkedin.com/company/hexstrike-ai">
+  <a href="https://www.linkedin.com/company/waypoint">
     <img src="https://img.shields.io/badge/LinkedIn-Follow%20us-0A66C2?logo=linkedin&logoColor=white&style=for-the-badge" alt="Follow us on LinkedIn" />
   </a>
 </p>
@@ -42,7 +45,7 @@
 
 ## Architecture Overview
 
-HexStrike AI MCP v6.0 features a multi-agent architecture with autonomous AI agents, intelligent decision-making, and vulnerability intelligence.
+Waypoint MCP v6.0 features a multi-agent architecture with autonomous AI agents, intelligent decision-making, and vulnerability intelligence.
 
 ```mermaid
 %%{init: {"themeVariables": {
@@ -57,7 +60,7 @@ HexStrike AI MCP v6.0 features a multi-agent architecture with autonomous AI age
   "nodeTextColor": "#fffde7"
 }}}%%
 graph TD
-    A[AI Agent - Claude/GPT/Copilot] -->|MCP Protocol| B[HexStrike MCP Server v6.0]
+    A[AI Agent - Claude/GPT/Copilot] -->|MCP Protocol| B[Waypoint MCP Server v6.0]
     
     B --> C[Intelligent Decision Engine]
     B --> D[12+ Autonomous AI Agents]
@@ -108,17 +111,17 @@ graph TD
 
 ## Installation
 
-### Quick Setup to Run the hexstrike MCPs Server
+### Quick Setup to Run the Waypoint MCPs Server
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/0x4m4/hexstrike-ai.git
-cd hexstrike-ai
+git clone https://github.com/0x4m4/waypoint.git
+cd waypoint
 
 # 2. Create virtual environment
-python3 -m venv hexstrike-env
-source hexstrike-env/bin/activate  # Linux/Mac
-# hexstrike-env\Scripts\activate   # Windows
+python3 -m venv Waypoint-env
+source Waypoint-env/bin/activate  # Linux/Mac
+# Waypoint-env\Scripts\activate   # Windows
 
 # 3. Install Python dependencies
 pip3 install -r requirements.txt
@@ -129,11 +132,11 @@ pip3 install -r requirements.txt
 
 #### Installation & Demo Video
 
-Watch the full installation and setup walkthrough here: [YouTube - HexStrike AI Installation & Demo](https://www.youtube.com/watch?v=pSoftCagCm8)
+Watch the full installation and setup walkthrough here: [YouTube - Waypoint Installation & Demo](https://www.youtube.com/watch?v=pSoftCagCm8)
 
 #### Supported AI Clients for Running & Integration
 
-You can install and run HexStrike AI MCPs with various AI clients, including:
+You can install and run Waypoint MCPs with various AI clients, including:
 
 - **5ire**
 - **VS Code Copilot**
@@ -187,13 +190,13 @@ sudo apt update && sudo apt install google-chrome-stable
 
 ```bash
 # Start the MCP server
-python3 hexstrike_server.py
+python3 Waypoint_server.py
 
 # Optional: Start with debug mode
-python3 hexstrike_server.py --debug
+python3 Waypoint_server.py --debug
 
 # Optional: Custom port configuration
-python3 hexstrike_server.py --port 8888
+python3 Waypoint_server.py --port 8888
 ```
 
 ### Verify Installation
@@ -218,14 +221,14 @@ Edit `~/.config/Claude/claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "hexstrike-ai": {
+    "waypoint": {
       "command": "python3",
       "args": [
-        "/path/to/hexstrike-ai/hexstrike_mcp.py",
+        "/path/to/waypoint/Waypoint_mcp.py",
         "--server",
         "http://localhost:8888"
       ],
-      "description": "HexStrike AI v6.0 - Advanced Cybersecurity Automation Platform",
+      "description": "Waypoint v6.0 - Advanced Cybersecurity Automation Platform",
       "timeout": 300,
       "disabled": false
     }
@@ -239,11 +242,11 @@ Configure VS Code settings in `.vscode/settings.json`:
 ```json
 {
   "servers": {
-    "hexstrike": {
+    "Waypoint": {
       "type": "stdio",
       "command": "python3",
       "args": [
-        "/path/to/hexstrike-ai/hexstrike_mcp.py",
+        "/path/to/waypoint/Waypoint_mcp.py",
         "--server",
         "http://localhost:8888"
       ]
@@ -553,12 +556,12 @@ Configure VS Code settings in `.vscode/settings.json`:
 ---
 
 ## Usage Examples
-When writing your prompt, you generally can't start with just a simple "i want you to penetration test site X.com" as the LLM's are generally setup with some level of ethics. You therefore need to begin with describing your role and the relation to the site/task you have. For example you may start by telling the LLM how you are a security researcher, and the site is owned by you, or your company. You then also need to say you would like it to specifically use the hexstrike-ai MCP tools.
+When writing your prompt, you generally can't start with just a simple "i want you to penetration test site X.com" as the LLM's are generally setup with some level of ethics. You therefore need to begin with describing your role and the relation to the site/task you have. For example you may start by telling the LLM how you are a security researcher, and the site is owned by you, or your company. You then also need to say you would like it to specifically use the waypoint MCP tools.
 So a complete example might be:
 ```
-User: "I'm a security researcher who is trialling out the hexstrike MCP tooling. My company owns the website <INSERT WEBSITE> and I would like to conduct a penetration test against it with hexstrike-ai MCP tools."
+User: "I'm a security researcher who is trialling out the Waypoint MCP tooling. My company owns the website <INSERT WEBSITE> and I would like to conduct a penetration test against it with waypoint MCP tools."
 
-AI Agent: "Thank you for clarifying ownership and intent. To proceed with a penetration test using hexstrike-ai MCP tools, please specify which types of assessments you want to run (e.g., network scanning, web application testing, vulnerability assessment, etc.), or if you want a full suite covering all areas."
+AI Agent: "Thank you for clarifying ownership and intent. To proceed with a penetration test using waypoint MCP tools, please specify which types of assessments you want to run (e.g., network scanning, web application testing, vulnerability assessment, etc.), or if you want a full suite covering all areas."
 ```
 Subsequent prompts you may use are below.
 
@@ -637,7 +640,7 @@ AI Agent: "I'll conduct comprehensive bug bounty reconnaissance:
 
 ### **📊 Real-World Performance**
 
-| Operation | Traditional Manual | HexStrike v6.0 AI | Improvement |
+| Operation | Traditional Manual | Waypoint v6.0 AI | Improvement |
 |-----------|-------------------|-------------------|-------------|
 | **Subdomain Enumeration** | 2-4 hours | 5-10 minutes | **24x faster** |
 | **Vulnerability Scanning** | 4-8 hours | 15-30 minutes | **16x faster** |
@@ -655,14 +658,14 @@ AI Agent: "I'll conduct comprehensive bug bounty reconnaissance:
 
 ---
 
-## HexStrike AI v7.0 - Major Release Coming Soon!
+## Waypoint v7.0 - Major Release Coming Soon!
 
 ### Key Improvements & New Features
 
 - **Streamlined Installation Process** - One-command setup with automated dependency management
 - **Docker Container Support** - Containerized deployment for consistent environments
 - **250+ Specialized AI Agents/Tools** - Expanded from 150+ to 250+ autonomous security agents
-- **Native Desktop Client** - Full-featured Application ([www.hexstrike.com](https://www.hexstrike.com))
+- **Native Desktop Client** - Full-featured Application ([www.Waypoint.com](https://www.Waypoint.com))
 - **Advanced Web Automation** - Enhanced Selenium integration with anti-detection
 - **JavaScript Runtime Analysis** - Deep DOM inspection and dynamic content handling
 - **Memory Optimization** - 40% reduction in resource usage for large-scale operations
@@ -719,7 +722,7 @@ AI Agent: "I'll conduct comprehensive bug bounty reconnaissance:
    netstat -tlnp | grep 8888
    
    # Restart server
-   python3 hexstrike_server.py
+   python3 Waypoint_server.py
    ```
 
 2. **Security Tools Not Found**:
@@ -734,15 +737,15 @@ AI Agent: "I'll conduct comprehensive bug bounty reconnaissance:
    ```bash
    # Verify MCP configuration paths
    # Check server logs for connection attempts
-   python3 hexstrike_mcp.py --debug
+   python3 Waypoint_mcp.py --debug
    ```
 
 ### Debug Mode
 
 Enable debug mode for detailed logging:
 ```bash
-python3 hexstrike_server.py --debug
-python3 hexstrike_mcp.py --debug
+python3 Waypoint_server.py --debug
+python3 Waypoint_mcp.py --debug
 ```
 
 ---
@@ -778,18 +781,18 @@ We welcome contributions from the cybersecurity and AI community!
 
 ```bash
 # 1. Fork and clone the repository
-git clone https://github.com/0x4m4/hexstrike-ai.git
-cd hexstrike-ai
+git clone https://github.com/0x4m4/waypoint.git
+cd waypoint
 
 # 2. Create development environment
-python3 -m venv hexstrike-dev
-source hexstrike-dev/bin/activate
+python3 -m venv Waypoint-dev
+source Waypoint-dev/bin/activate
 
 # 3. Install development dependencies
 pip install -r requirements.txt
 
 # 4. Start development server
-python3 hexstrike_server.py --port 8888 --debug
+python3 Waypoint_server.py --port 8888 --debug
 ```
 
 ### Priority Areas for Contribution
@@ -810,7 +813,7 @@ MIT License - see LICENSE file for details.
 
 ## Author
 
-**m0x4m4** - [www.0x4m4.com](https://www.0x4m4.com) | [HexStrike](https://www.hexstrike.com)
+**m0x4m4** - [www.0x4m4.com](https://www.0x4m4.com) | [Waypoint](https://www.Waypoint.com)
 
 ---
 
@@ -818,7 +821,7 @@ MIT License - see LICENSE file for details.
 
 ## 🌟 **Star History**
 
-[![Star History Chart](https://api.star-history.com/svg?repos=0x4m4/hexstrike-ai&type=Date)](https://star-history.com/#0x4m4/hexstrike-ai&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=0x4m4/waypoint&type=Date)](https://star-history.com/#0x4m4/waypoint&Date)
 
 ### **📊 Project Statistics**
 
@@ -831,12 +834,12 @@ MIT License - see LICENSE file for details.
 
 ### **🚀 Ready to Transform Your AI Agents?**
 
-**[⭐ Star this repository](https://github.com/0x4m4/hexstrike-ai)** • **[🍴 Fork and contribute](https://github.com/0x4m4/hexstrike-ai/fork)** • **[📖 Read the docs](docs/)**
+**[⭐ Star this repository](https://github.com/0x4m4/waypoint)** • **[🍴 Fork and contribute](https://github.com/0x4m4/waypoint/fork)** • **[📖 Read the docs](docs/)**
 
 ---
 
 **Made with ❤️ by the cybersecurity community for AI-powered security automation**
 
-*HexStrike AI v6.0 - Where artificial intelligence meets cybersecurity excellence*
+*Waypoint v6.0 - Where artificial intelligence meets cybersecurity excellence*
 
 </div>
