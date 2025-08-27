@@ -180,7 +180,7 @@ class ModernVisualEngine:
         RESET = ModernVisualEngine.COLORS['RESET']
         BOLD = ModernVisualEngine.COLORS['BOLD']
         title_block = f"{accent}{BOLD}"
-        banner = f"""
+        banner = fr"""
 {title_block} 
                                  _       _
 __      ____ _ _   _ _ __   ___ (_)_ __ | |_
@@ -190,7 +190,7 @@ __      ____ _ _   _ _ __   ___ (_)_ __ | |_
                |___/|_|
 {RESET}
 {border_color}┌─────────────────────────────────────────────────────────────────────┐
-│  {ModernVisualEngine.COLORS['BRIGHT_WHITE']}🚀 waypoint - Blood-Red Offensive Intelligence Core{border_color}                │
+│  {ModernVisualEngine.COLORS['BRIGHT_WHITE']}🚀 waypoint - Offensive Intelligence Core{border_color}                          │
 │  {accent}⚡ AI-Automated Recon | Exploitation | Analysis Pipeline{border_color}           │
 │  {gradient}🎯 Bug Bounty | CTF | Red Team | Zero-Day Research{border_color}                 │
 └─────────────────────────────────────────────────────────────────────┘{RESET}
@@ -1309,7 +1309,7 @@ class IntelligentDecisionEngine:
         
         # Set project name based on binary
         binary_name = os.path.basename(profile.target).replace('.', '_')
-        params["project_name"] = f"hexstrike_{binary_name}"
+        params["project_name"] = f"waypoint_{binary_name}"
         
         return params
     
@@ -6006,7 +6006,7 @@ COMMAND_TIMEOUT = 300  # 5 minutes default timeout
 CACHE_SIZE = 1000
 CACHE_TTL = 3600  # 1 hour
 
-class HexStrikeCache:
+class WaypointCache:
     """Advanced caching system for command results"""
     
     def __init__(self, max_size: int = CACHE_SIZE, ttl: int = CACHE_TTL):
@@ -6072,7 +6072,7 @@ class HexStrikeCache:
         }
 
 # Global cache instance
-cache = HexStrikeCache()
+cache = WaypointCache()
 
 class TelemetryCollector:
     """Collect and manage system telemetry"""
@@ -11815,7 +11815,7 @@ class BrowserAgent:
             time.sleep(wait_time)
             
             # Take screenshot
-            screenshot_path = f"/tmp/hexstrike_screenshot_{int(time.time())}.png"
+            screenshot_path = f"/tmp/waypoint_screenshot_{int(time.time())}.png"
             self.driver.save_screenshot(screenshot_path)
             self.screenshots.append(screenshot_path)
             
@@ -12317,7 +12317,7 @@ def browser_agent_endpoint():
                     400,
                 )
 
-            screenshot_path = f"/tmp/hexstrike_screenshot_{int(time.time())}.png"
+            screenshot_path = f"/tmp/waypoint_screenshot_{int(time.time())}.png"
             browser_agent.driver.save_screenshot(screenshot_path)
 
             return jsonify(
