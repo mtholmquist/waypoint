@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "hexstrike-ai": {
+    "waypoint-ai": {
       "command": "python3",
       "args": [
         "/path/waypoint_mcp.py",
