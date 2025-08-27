@@ -5408,7 +5408,7 @@ def setup_mcp_server(hexstrike_client: HexStrikeClient) -> FastMCP:
 
 def parse_args():
     """Parse command line arguments."""
-    parser = argparse.ArgumentParser(description="Run the HexStrike AI MCP Client")
+    parser = argparse.ArgumentParser(description="Run the {NEW} MCP Client")
     parser.add_argument("--server", type=str, default=DEFAULT_HEXSTRIKE_SERVER, 
                       help=f"HexStrike AI API server URL (default: {DEFAULT_HEXSTRIKE_SERVER})")
     parser.add_argument("--timeout", type=int, default=DEFAULT_REQUEST_TIMEOUT,

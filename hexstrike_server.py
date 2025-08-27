@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-HexStrike AI - Advanced Penetration Testing Framework Server
+Waypoint - Advanced Penetration Testing Framework Server
 
 Enhanced with AI-Powered Intelligence & Automation
 🚀 Bug Bounty | CTF | Red Team | Security Research
@@ -11772,7 +11772,7 @@ class BrowserAgent:
             chrome_options.add_argument('--disable-dev-shm-usage')
             chrome_options.add_argument('--disable-gpu')
             chrome_options.add_argument('--window-size=1920,1080')
-            chrome_options.add_argument('--user-agent=HexStrike-BrowserAgent/1.0 (Security Testing)')
+            chrome_options.add_argument('--user-agent=Waypoint-BrowserAgent/1.0 (Security Testing)')
             
             # Enable logging
             chrome_options.add_argument('--enable-logging')
