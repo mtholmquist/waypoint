@@ -1,21 +1,18 @@
-## Provenance & License
-This distribution incorporates code from https://github.com/0x4m4/hexstrike-ai, which indicates an MIT License in its README (commit 0475ec44ff34eba7bb3737244c6e32f25466b05d). See NOTICE and LICENSE for details.
-
 <div align="center">
 
-<img src="assets/waypoint-logo.png" alt="Waypoint Logo" width="220" style="margin-bottom: 20px;"/>
+<img src="assets/waypoint.png" alt="Waypoint Logo" width="220" style="margin-bottom: 20px;"/>
 
 # Waypoint MCP Agents v6.0
 ### AI-Powered MCP Cybersecurity Automation Platform
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Security](https://img.shields.io/badge/Security-Penetration%20Testing-red.svg)](https://github.com/0x4m4/waypoint)
-[![MCP](https://img.shields.io/badge/MCP-Compatible-purple.svg)](https://github.com/0x4m4/waypoint)
-[![Version](https://img.shields.io/badge/Version-6.0.0-orange.svg)](https://github.com/0x4m4/waypoint/releases)
-[![Tools](https://img.shields.io/badge/Security%20Tools-150%2B-brightgreen.svg)](https://github.com/0x4m4/waypoint)
-[![Agents](https://img.shields.io/badge/AI%20Agents-12%2B-purple.svg)](https://github.com/0x4m4/waypoint)
-[![Stars](https://img.shields.io/github/stars/0x4m4/waypoint?style=social)](https://github.com/0x4m4/waypoint)
+[![Security](https://img.shields.io/badge/Security-Penetration%20Testing-red.svg)](https://github.com/mtholmquist/waypoint)
+[![MCP](https://img.shields.io/badge/MCP-Compatible-purple.svg)](https://github.com/mtholmquist/waypoint)
+[![Version](https://img.shields.io/badge/Version-6.0.0-orange.svg)](https://github.com/mtholmquist/waypoint/releases)
+[![Tools](https://img.shields.io/badge/Security%20Tools-150%2B-brightgreen.svg)](https://github.com/mtholmquist/waypoint)
+[![Agents](https://img.shields.io/badge/AI%20Agents-12%2B-purple.svg)](https://github.com/mtholmquist/waypoint)
+[![Stars](https://img.shields.io/github/stars/0x4m4/waypoint?style=social)](https://github.com/mtholmquist/waypoint)
 
 **Advanced AI-powered penetration testing MCP framework with 150+ security tools and 12+ autonomous AI agents**
 
@@ -27,21 +24,6 @@ This distribution incorporates code from https://github.com/0x4m4/hexstrike-ai, 
 
 <div align="center">
 
-## Follow Our Social Accounts
-
-<p align="center">
-  <a href="https://discord.gg/BWnmrrSHbA">
-    <img src="https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white&style=for-the-badge" alt="Join our Discord" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://www.linkedin.com/company/waypoint">
-    <img src="https://img.shields.io/badge/LinkedIn-Follow%20us-0A66C2?logo=linkedin&logoColor=white&style=for-the-badge" alt="Follow us on LinkedIn" />
-  </a>
-</p>
-
-</div>
-
----
 
 ## Architecture Overview
 
@@ -115,12 +97,12 @@ graph TD
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/0x4m4/waypoint.git
+git clone https://github.com/mtholmquist/waypoint.git
 cd waypoint
 
 # 2. Create virtual environment
-python3 -m venv Waypoint-env
-source Waypoint-env/bin/activate  # Linux/Mac
+python3 -m venv waypoint-env
+source waypoint-env/bin/activate  # Linux/Mac
 # Waypoint-env\Scripts\activate   # Windows
 
 # 3. Install Python dependencies
@@ -190,13 +172,13 @@ sudo apt update && sudo apt install google-chrome-stable
 
 ```bash
 # Start the MCP server
-python3 Waypoint_server.py
+python3 waypoint_server.py
 
 # Optional: Start with debug mode
-python3 Waypoint_server.py --debug
+python3 waypoint_server.py --debug
 
 # Optional: Custom port configuration
-python3 Waypoint_server.py --port 8888
+python3 waypoint_server.py --port 8888
 ```
 
 ### Verify Installation
@@ -224,7 +206,7 @@ Edit `~/.config/Claude/claude_desktop_config.json`:
     "waypoint": {
       "command": "python3",
       "args": [
-        "/path/to/waypoint/Waypoint_mcp.py",
+        "/path/to/waypoint/waypoint_mcp.py",
         "--server",
         "http://localhost:8888"
       ],
@@ -246,7 +228,7 @@ Configure VS Code settings in `.vscode/settings.json`:
       "type": "stdio",
       "command": "python3",
       "args": [
-        "/path/to/waypoint/Waypoint_mcp.py",
+        "/path/to/waypoint/waypoint_mcp.py",
         "--server",
         "http://localhost:8888"
       ]
@@ -665,7 +647,7 @@ AI Agent: "I'll conduct comprehensive bug bounty reconnaissance:
 - **Streamlined Installation Process** - One-command setup with automated dependency management
 - **Docker Container Support** - Containerized deployment for consistent environments
 - **250+ Specialized AI Agents/Tools** - Expanded from 150+ to 250+ autonomous security agents
-- **Native Desktop Client** - Full-featured Application ([www.Waypoint.com](https://www.Waypoint.com))
+- **Native Desktop Client** - Full-featured Application
 - **Advanced Web Automation** - Enhanced Selenium integration with anti-detection
 - **JavaScript Runtime Analysis** - Deep DOM inspection and dynamic content handling
 - **Memory Optimization** - 40% reduction in resource usage for large-scale operations
@@ -722,7 +704,7 @@ AI Agent: "I'll conduct comprehensive bug bounty reconnaissance:
    netstat -tlnp | grep 8888
    
    # Restart server
-   python3 Waypoint_server.py
+   python3 waypoint_server.py
    ```
 
 2. **Security Tools Not Found**:
@@ -737,15 +719,15 @@ AI Agent: "I'll conduct comprehensive bug bounty reconnaissance:
    ```bash
    # Verify MCP configuration paths
    # Check server logs for connection attempts
-   python3 Waypoint_mcp.py --debug
+   python3 waypoint_mcp.py --debug
    ```
 
 ### Debug Mode
 
 Enable debug mode for detailed logging:
 ```bash
-python3 Waypoint_server.py --debug
-python3 Waypoint_mcp.py --debug
+python3 waypoint_server.py --debug
+python3 waypoint_mcp.py --debug
 ```
 
 ---
@@ -781,18 +763,18 @@ We welcome contributions from the cybersecurity and AI community!
 
 ```bash
 # 1. Fork and clone the repository
-git clone https://github.com/0x4m4/waypoint.git
+git clone https://github.com/mtholmquist/waypoint.git
 cd waypoint
 
 # 2. Create development environment
-python3 -m venv Waypoint-dev
+python3 -m venv waypoint-dev
 source Waypoint-dev/bin/activate
 
 # 3. Install development dependencies
 pip install -r requirements.txt
 
 # 4. Start development server
-python3 Waypoint_server.py --port 8888 --debug
+python3 waypoint_server.py --port 8888 --debug
 ```
 
 ### Priority Areas for Contribution
@@ -808,12 +790,6 @@ python3 Waypoint_server.py --port 8888 --debug
 ## License
 
 MIT License - see LICENSE file for details.
-
----
-
-## Author
-
-**m0x4m4** - [www.0x4m4.com](https://www.0x4m4.com) | [Waypoint](https://www.Waypoint.com)
 
 ---
 
@@ -843,3 +819,6 @@ MIT License - see LICENSE file for details.
 *Waypoint v6.0 - Where artificial intelligence meets cybersecurity excellence*
 
 </div>
+
+## Provenance & License
+This distribution incorporates code from https://github.com/0x4m4/hexstrike-ai, which indicates an MIT License in its README (commit 0475ec44ff34eba7bb3737244c6e32f25466b05d). See NOTICE and LICENSE for details.
